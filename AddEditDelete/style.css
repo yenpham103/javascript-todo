@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(131, 164, 212), rgb(182, 251, 255));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.app {
+}
+.container {
+  background: linear-gradient(to right, rgb(85, 98, 112), rgb(255, 107, 107));
+  border-radius: 10px;
+  padding: 30px;
+}
+#wrapper {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 0;
+}
+#wrapper input {
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+  border: 1px solid rgb(182, 251, 255);
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: 500;
+}
+#wrapper input::placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+#wrapper #add-btn {
+  outline: none;
+  border: 1px solid rgb(182, 251, 255);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: rgb(85, 98, 112);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+#tasks {
+  margin-top: 10px;
+  width: 100%;
+}
+.task {
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr 8fr 2fr 2fr;
+  padding: 10px;
+  gap: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid rgb(182, 251, 255);
+}
+#error {
+  text-align: center;
+  background: linear-gradient(to right, rgb(157, 80, 187), rgb(110, 72, 170));
+  padding: 7px 0;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 20px;
+  display: none;
+}
+.task input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #ffffff7a;
+}
+.task input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.task input[type="checkbox"]:checked {
+  background-color: rgb(182, 251, 255);
+  border-color: rgb(182, 251, 255);
+}
+.task input[type="checkbox"]:checked::before {
+  position: absolute;
+  content: "\f00c";
+  color: #fff;
+  font-size: 12px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.task span {
+  font: 14px;
+  font-weight: 400;
+  word-break: break-all;
+}
+
+.task button {
+  color: #fff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+}
+.edit {
+  background-color: rgb(182, 251, 255);
+}
+.delete {
+  background-color: rgb(255, 107, 107);
+}
+#pending-tasks span {
+  color: rgb(182, 251, 255);
+}
+.completed {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
